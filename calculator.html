@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A small command-style calculator for adding and calculating numbers." />
+    <title>Calc // Command Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Utility // Terminal 01</p>
+        <h1 id="page-title">CALC<span>//</span></h1>
+        <p class="lede">A quiet command line for quick arithmetic. Type a command, pass in your numbers, and let the answer land.</p>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="hint">Try <strong>1 + 1</strong> or type <strong>help</strong> to see every command.</p>
+      </section>
+
+      <section class="calculator-panel" aria-labelledby="calculator-title">
+        <div class="panel-topline">
+          <p id="calculator-title">Command calculator</p>
+          <span class="status"><span class="status-dot" aria-hidden="true"></span> ready</span>
+        </div>
+        <div id="output" class="terminal-output" aria-live="polite" aria-atomic="false">
+          <p class="output-line muted">Welcome. Type <span>help</span> to begin.</p>
+        </div>
+        <form id="calculator-form" novalidate>
+          <label for="command-input">Enter expression or command</label>
+          <div class="command-wrap">
+            <span class="prompt" aria-hidden="true">$</span>
+            <input id="command-input" name="command" type="text" autocomplete="off" spellcheck="false" placeholder="1 + 1" aria-describedby="command-message" />
+            <button type="submit" aria-label="Evaluate expression">=</button>
+          </div>
+          <p id="command-message" class="input-message">Numbers are separated by spaces.</p>
+        </form>
+      </section>
+    </main>
+    <footer>CALC <span>•</span> COMMAND-LINE ARITHMETIC</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
